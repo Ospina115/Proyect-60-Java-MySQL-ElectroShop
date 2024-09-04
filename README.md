@@ -10,6 +10,10 @@ Este proyecto tiene como objetivo principal el desarrollo de un sistema de gesti
 
 
 
+![](proyectojava-db.png)
+
+
+
 ### **Arquitectura del Sistema:**
 
 
