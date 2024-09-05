@@ -4,48 +4,15 @@
  */
 package com.tiendaelectrica.menuprincipal;
 
-/**
- *Inventario
-Agregar producto
-Editar producto
-Eliminar producto
-Consultar productos
-Generar reporte de inventario
-* 
-Clientes
-Registrar cliente
-Editar cliente
-Eliminar cliente
-Consultar clientes
-Generar reporte de clientes
-* 
-Ventas
-Realizar venta
-Consultar ventas
-Generar factura
-Generar reporte de ventas
-* 
-Pedidos
-Agregar pedido
-Editar pedido
-Eliminar pedido
-Consultar pedidos pendientes
-Actualizar estado de pedido
-* 
-Reportes
-Ventas por período
-Ventas por producto
-Ventas por cliente
-Inventario actual
-Pedidos pendientes
-* 
-Configuración
-Parámetros del sistema
-Usuarios y permisos
-Integración con terceros (opcional)
+// IMPORTACIONES PARA EL MENU PRINCIPAL
 
- * 
- */
+import com.tiendaelectrica.menuclientes.menuclientes;
+import com.tiendaelectrica.menucompras.menucompras;
+import com.tiendaelectrica.menuventas.menuventas;
+import com.tiendaelectrica.menuinventario.menuinventario;
+import com.tiendaelectrica.menuproveedores.menuproveedores;
+import com.tiendaelectrica.menureportes.menureportes;
+
 public class menuprincipal extends javax.swing.JFrame {
 
     /**
@@ -53,6 +20,8 @@ public class menuprincipal extends javax.swing.JFrame {
      */
     public menuprincipal() {
         initComponents();
+        setResizable(false);
+        setLocationRelativeTo(null);
     }
 
     /**
@@ -74,11 +43,12 @@ public class menuprincipal extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 2, 48)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 3, 48)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 204, 204));
         jLabel1.setText("MENU PRINCIPAL");
 
-        inventario.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        inventario.setBackground(new java.awt.Color(204, 255, 255));
+        inventario.setFont(new java.awt.Font("aakar", 2, 24)); // NOI18N
         inventario.setText("INVENTARIO");
         inventario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -86,7 +56,8 @@ public class menuprincipal extends javax.swing.JFrame {
             }
         });
 
-        clientes.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        clientes.setBackground(new java.awt.Color(204, 255, 255));
+        clientes.setFont(new java.awt.Font("aakar", 2, 24)); // NOI18N
         clientes.setText("CLIENTES");
         clientes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -94,7 +65,8 @@ public class menuprincipal extends javax.swing.JFrame {
             }
         });
 
-        ventas.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        ventas.setBackground(new java.awt.Color(204, 255, 255));
+        ventas.setFont(new java.awt.Font("aakar", 2, 24)); // NOI18N
         ventas.setText("VENTAS");
         ventas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -102,7 +74,8 @@ public class menuprincipal extends javax.swing.JFrame {
             }
         });
 
-        compras.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        compras.setBackground(new java.awt.Color(204, 255, 255));
+        compras.setFont(new java.awt.Font("aakar", 2, 24)); // NOI18N
         compras.setText("COMPRAS");
         compras.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -110,7 +83,8 @@ public class menuprincipal extends javax.swing.JFrame {
             }
         });
 
-        reportes.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        reportes.setBackground(new java.awt.Color(204, 255, 255));
+        reportes.setFont(new java.awt.Font("aakar", 2, 24)); // NOI18N
         reportes.setText("REPORTES");
         reportes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -118,7 +92,8 @@ public class menuprincipal extends javax.swing.JFrame {
             }
         });
 
-        proveedores.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        proveedores.setBackground(new java.awt.Color(204, 255, 255));
+        proveedores.setFont(new java.awt.Font("aakar", 2, 24)); // NOI18N
         proveedores.setText("PROVEEDORES");
         proveedores.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -130,72 +105,75 @@ public class menuprincipal extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(57, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(37, 37, 37)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel1)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(reportes)
-                                .addGap(47, 47, 47))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(ventas)
-                                .addGap(70, 70, 70))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(inventario)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(proveedores, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(compras, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(clientes, javax.swing.GroupLayout.Alignment.TRAILING))))
-                .addGap(66, 66, 66))
+                    .addComponent(ventas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(compras, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(proveedores, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(reportes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(clientes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(inventario, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(37, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(15, 15, 15)
+                .addGap(32, 32, 32)
                 .addComponent(jLabel1)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(inventario)
-                    .addComponent(clientes))
+                .addGap(42, 42, 42)
+                .addComponent(inventario)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(ventas)
-                    .addComponent(compras))
+                .addComponent(clientes)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(reportes)
-                    .addComponent(proveedores))
-                .addContainerGap(77, Short.MAX_VALUE))
+                .addComponent(ventas)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(compras)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(proveedores)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(reportes)
+                .addContainerGap(61, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void inventarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inventarioActionPerformed
-        // AQUI VA EL CODIGO Y LO LOGICO DE LA PARTE DEL INVENTARIO
+        this.dispose();
+        menuinventario menuinventario = new menuinventario();
+        menuinventario.setVisible(true);
     }//GEN-LAST:event_inventarioActionPerformed
 
     private void clientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clientesActionPerformed
-        // AQUI VA EL CODIGO Y LO LOGICO DE LA PARTE DE CLIENTES
+        this.dispose();
+        menuclientes menuclientes = new menuclientes();
+        menuclientes.setVisible(true);
     }//GEN-LAST:event_clientesActionPerformed
 
     private void ventasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ventasActionPerformed
-        // AQUI VA EL CODIGO Y LO LOGICO DE LA PARTE DEL VENTAS
+        this.dispose();
+        menuventas menuventas = new menuventas();
+        menuventas.setVisible(true);
     }//GEN-LAST:event_ventasActionPerformed
 
     private void comprasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comprasActionPerformed
-        // AQUI VA EL CODIGO Y LO LOGICO DE LA PARTE DE COMPRAS
+        this.dispose();
+        menucompras menucompras = new menucompras();
+        menucompras.setVisible(true);
     }//GEN-LAST:event_comprasActionPerformed
 
     private void reportesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_reportesActionPerformed
-        // AQUI VA EL CODIGO Y LO LOGICO DE LA PARTE DE REPORTES
+        this.dispose();
+        menureportes menureportes = new menureportes();
+        menureportes.setVisible(true);
     }//GEN-LAST:event_reportesActionPerformed
 
     private void proveedoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_proveedoresActionPerformed
-        // AQUI VA EL CODIGO Y LO LOGICO DE LA PARTE DE PROVEEDORES
+        this.dispose();
+        menuproveedores menuproveedores = new menuproveedores();
+        menuproveedores.setVisible(true);
     }//GEN-LAST:event_proveedoresActionPerformed
 
     /**

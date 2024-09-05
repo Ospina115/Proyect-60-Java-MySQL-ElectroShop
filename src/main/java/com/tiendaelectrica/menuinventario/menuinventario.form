@@ -23,18 +23,17 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Component id="ventas" max="32767" attributes="0"/>
-                  <Component id="compras" alignment="0" max="32767" attributes="0"/>
-                  <Component id="proveedores" alignment="0" max="32767" attributes="0"/>
-                  <Component id="reportes" alignment="0" max="32767" attributes="0"/>
-                  <Component id="jLabel1" alignment="0" max="32767" attributes="0"/>
-                  <Component id="clientes" max="32767" attributes="0"/>
-                  <Component id="inventario" alignment="0" max="32767" attributes="0"/>
+                  <Component id="buscarcompra" alignment="0" max="32767" attributes="0"/>
+                  <Component id="eliminarcompra" alignment="0" max="32767" attributes="0"/>
+                  <Component id="regresar" alignment="0" max="32767" attributes="0"/>
+                  <Component id="jLabel2" alignment="0" max="32767" attributes="0"/>
+                  <Component id="editarcompra" alignment="0" max="32767" attributes="0"/>
+                  <Component id="registrarcompra" alignment="0" max="32767" attributes="0"/>
               </Group>
-              <EmptySpace pref="37" max="32767" attributes="0"/>
+              <EmptySpace pref="40" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -42,26 +41,24 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
-              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+              <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
-              <Component id="inventario" min="-2" max="-2" attributes="0"/>
+              <Component id="registrarcompra" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Component id="clientes" min="-2" max="-2" attributes="0"/>
+              <Component id="editarcompra" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Component id="ventas" min="-2" max="-2" attributes="0"/>
+              <Component id="buscarcompra" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Component id="compras" min="-2" max="-2" attributes="0"/>
+              <Component id="eliminarcompra" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Component id="proveedores" min="-2" max="-2" attributes="0"/>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Component id="reportes" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="61" max="32767" attributes="0"/>
+              <Component id="regresar" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="34" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JLabel" name="jLabel1">
+    <Component class="javax.swing.JLabel" name="jLabel2">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Segoe UI" size="48" style="3"/>
@@ -69,10 +66,10 @@
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="cc" green="cc" red="0" type="rgb"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="MENU PRINCIPAL"/>
+        <Property name="text" type="java.lang.String" value="MENU INVENTARIO"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="inventario">
+    <Component class="javax.swing.JButton" name="registrarcompra">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="cc" type="rgb"/>
@@ -80,13 +77,13 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="aakar" size="24" style="2"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="INVENTARIO"/>
+        <Property name="text" type="java.lang.String" value="Registrar Compra"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="inventarioActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="registrarcompraActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="clientes">
+    <Component class="javax.swing.JButton" name="editarcompra">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="cc" type="rgb"/>
@@ -94,13 +91,13 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="aakar" size="24" style="2"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="CLIENTES"/>
+        <Property name="text" type="java.lang.String" value="Editar Compra"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="clientesActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="editarcompraActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="ventas">
+    <Component class="javax.swing.JButton" name="buscarcompra">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="cc" type="rgb"/>
@@ -108,13 +105,13 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="aakar" size="24" style="2"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="VENTAS"/>
+        <Property name="text" type="java.lang.String" value="Buscar Compra"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ventasActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buscarcompraActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="compras">
+    <Component class="javax.swing.JButton" name="eliminarcompra">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="cc" type="rgb"/>
@@ -122,38 +119,24 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="aakar" size="24" style="2"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="COMPRAS"/>
+        <Property name="text" type="java.lang.String" value="Eliminar Compra"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="comprasActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="eliminarcompraActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="reportes">
+    <Component class="javax.swing.JButton" name="regresar">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="ff" green="ff" red="cc" type="rgb"/>
+          <Color blue="cc" green="cc" red="ff" type="rgb"/>
         </Property>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="aakar" size="24" style="2"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="REPORTES"/>
+        <Property name="text" type="java.lang.String" value="Regresar al Menu Principal"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="reportesActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="proveedores">
-      <Properties>
-        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="ff" green="ff" red="cc" type="rgb"/>
-        </Property>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="aakar" size="24" style="2"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="PROVEEDORES"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="proveedoresActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="regresarActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>
