@@ -1,6 +1,6 @@
 package com.tiendaelectrica;
 
-import com.tiendaelectrica.menuprincipal.menuprincipal;
+import com.tiendaelectrica.menus.menuprincipal.menuprincipal;
 
 public class Main {
     public static void main(String args[]) {
