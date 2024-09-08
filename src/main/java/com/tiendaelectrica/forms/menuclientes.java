@@ -5,6 +5,11 @@
 package com.tiendaelectrica.forms;
 import com.tiendaelectrica.menuprincipal.menuprincipal;
 
+// IMPORTACIONES PARA FUNCIONAR
+import main.java.com.tiendaelectrica.cruds.clientes.Cliente;
+import main.java.com.tiendaelectrica.cruds.clientes.ClienteDAO;
+
+
 /**
  *
  * @author camper
@@ -157,6 +162,8 @@ public class menuclientes extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    ClienteDAO clienteDAO = new ClienteDAO();
+
     private void regresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_regresarActionPerformed
         this.dispose();
         menuprincipal menu = new menuprincipal();
@@ -164,19 +171,19 @@ public class menuclientes extends javax.swing.JFrame {
     }//GEN-LAST:event_regresarActionPerformed
 
     private void eliminarclienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eliminarclienteActionPerformed
-        // AQUI VA EL CODIGO Y LO LOGICO DE LA PARTE DE COMPRAS
+        clienteDAO.eliminarCliente();
     }//GEN-LAST:event_eliminarclienteActionPerformed
 
     private void buscarclienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buscarclienteActionPerformed
-        // AQUI VA EL CODIGO Y LO LOGICO DE LA PARTE DEL VENTAS
+        clienteDAO.obtenerCliente();
     }//GEN-LAST:event_buscarclienteActionPerformed
 
     private void editarclienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editarclienteActionPerformed
-        // AQUI VA EL CODIGO Y LO LOGICO DE LA PARTE DE CLIENTES
+        clienteDAO.actualizarCliente();
     }//GEN-LAST:event_editarclienteActionPerformed
 
     private void crearclienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_crearclienteActionPerformed
-        // AQUI VA EL CODIGO Y LO LOGICO DE LA PARTE DEL INVENTARIO
+        clienteDAO.agregarCliente();
     }//GEN-LAST:event_crearclienteActionPerformed
 
     /**
