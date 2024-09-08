@@ -1,3 +1,7 @@
+package com.tiendaelectrica.cruds.ventas.domain.entity;
+
+import java.sql.Date;
+
 public class Ventas {
     
     private int id;

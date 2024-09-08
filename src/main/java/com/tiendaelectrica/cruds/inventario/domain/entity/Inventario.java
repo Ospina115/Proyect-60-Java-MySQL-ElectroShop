@@ -1,3 +1,7 @@
+package com.tiendaelectrica.cruds.inventario.domain.entity;
+
+import java.sql.Date;
+
 public class Inventario {
     
     private int id;

@@ -1,3 +1,5 @@
+package com.tiendaelectrica.cruds.proveedores.domain.entity;
+
 public class Proveedores {
     
     private String id;

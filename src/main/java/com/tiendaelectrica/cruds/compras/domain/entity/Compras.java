@@ -1,6 +1,10 @@
+package com.tiendaelectrica.cruds.compras.domain.entity;
+
+import java.sql.Date;
+
 public class Compras {
     
-    private string id;
+    private String id;
     private Date fecha;
     private int precio;
     
@@ -9,11 +13,11 @@ public class Compras {
         this.precio = precio;
     }
 
-    public string getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(string id) {
+    public void setId(String id) {
         this.id = id;
     }
 
