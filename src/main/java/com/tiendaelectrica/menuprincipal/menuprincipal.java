@@ -6,12 +6,12 @@ package com.tiendaelectrica.menuprincipal;
 
 // IMPORTACIONES PARA EL MENU PRINCIPAL
 
-import com.tiendaelectrica.forms.menuclientes.menuclientes;
-import com.tiendaelectrica.forms.menucompras.menucompras;
-import com.tiendaelectrica.forms.menuventas.menuventas;
-import com.tiendaelectrica.forms.menuinventario.menuinventario;
-import com.tiendaelectrica.forms.menuproveedores.menuproveedores;
-import com.tiendaelectrica.forms.menureportes.menureportes;
+import com.tiendaelectrica.forms.menuclientes;
+import com.tiendaelectrica.forms.menucompras;
+import com.tiendaelectrica.forms.menuinventario;
+import com.tiendaelectrica.forms.menuproveedores;
+import com.tiendaelectrica.forms.menureportes;
+import com.tiendaelectrica.forms.menuventas;
 
 public class menuprincipal extends javax.swing.JFrame {
 
