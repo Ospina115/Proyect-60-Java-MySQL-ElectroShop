@@ -8,6 +8,16 @@ public class Cliente {
     private String telefonoCliente;
     private int idDireccionCliente;
 
+    
+    public Cliente(String nombreCliente, String apellidoCliente, String emailCliente, String telefonoCliente,
+            int idDireccionCliente) {
+        this.nombreCliente = nombreCliente;
+        this.apellidoCliente = apellidoCliente;
+        this.emailCliente = emailCliente;
+        this.telefonoCliente = telefonoCliente;
+        this.idDireccionCliente = idDireccionCliente;
+    }
+
     // Getters y setters
     public int getIdCliente() {
         return idCliente;

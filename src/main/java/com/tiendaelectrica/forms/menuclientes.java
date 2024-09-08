@@ -6,7 +6,6 @@ package com.tiendaelectrica.forms;
 import com.tiendaelectrica.menuprincipal.menuprincipal;
 
 // IMPORTACIONES PARA FUNCIONAR
-import main.java.com.tiendaelectrica.cruds.clientes.Cliente;
 import main.java.com.tiendaelectrica.cruds.clientes.ClienteDAO;
 
 

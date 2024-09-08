@@ -2,11 +2,10 @@ package main.java.com.tiendaelectrica.cruds.clientes;
 
 import java.sql.*;
 import javax.swing.JOptionPane;
-import com.tiendaelectrica.infraestructure.DatabaseConfig;;
+import com.tiendaelectrica.infraestructure.DatabaseConfig;
 
 public class ClienteDAO {
 
-    // Crear un nuevo cliente
     public void agregarCliente() {
         String nombre = JOptionPane.showInputDialog("Ingrese el nombre del cliente:");
         String apellido = JOptionPane.showInputDialog("Ingrese el apellido del cliente:");
@@ -30,7 +29,6 @@ public class ClienteDAO {
         }
     }
 
-    // Leer cliente por ID
     public void obtenerCliente() {
         int idCliente = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el ID del cliente:"));
 
@@ -57,7 +55,6 @@ public class ClienteDAO {
         }
     }
 
-    // Actualizar cliente
     public void actualizarCliente() {
         int idCliente = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el ID del cliente a actualizar:"));
 
@@ -84,7 +81,6 @@ public class ClienteDAO {
         }
     }
 
-    // Eliminar cliente
     public void eliminarCliente() {
         int idCliente = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el ID del cliente a eliminar:"));
 

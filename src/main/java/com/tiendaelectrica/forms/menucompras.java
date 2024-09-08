@@ -3,8 +3,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package com.tiendaelectrica.forms;
-
 import com.tiendaelectrica.menuprincipal.menuprincipal;
+
+// IMPORTACIONES PARA FUNCIONAR
+import com.tiendaelectrica.cruds.compras.CompraDAO;
+import main.java.com.tiendaelectrica.cruds.compras.DetallesCompraDAO;
 
 /**
  *
@@ -35,6 +38,10 @@ public class menucompras extends javax.swing.JFrame {
         editarcompra = new javax.swing.JButton();
         registrarcompra = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
+        agregardetallescompra = new javax.swing.JButton();
+        buscardetallescompra = new javax.swing.JButton();
+        editardetallescompra = new javax.swing.JButton();
+        eliminardetallescompra = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -87,6 +94,42 @@ public class menucompras extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(0, 204, 204));
         jLabel2.setText("MENU COMPRAS");
 
+        agregardetallescompra.setBackground(new java.awt.Color(204, 255, 255));
+        agregardetallescompra.setFont(new java.awt.Font("Segoe UI", 2, 24)); // NOI18N
+        agregardetallescompra.setText("Agregar detalles de compra");
+        agregardetallescompra.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                agregardetallescompraActionPerformed(evt);
+            }
+        });
+
+        buscardetallescompra.setBackground(new java.awt.Color(204, 255, 255));
+        buscardetallescompra.setFont(new java.awt.Font("Segoe UI", 2, 24)); // NOI18N
+        buscardetallescompra.setText("Buscar detalles de compra");
+        buscardetallescompra.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buscardetallescompraActionPerformed(evt);
+            }
+        });
+
+        editardetallescompra.setBackground(new java.awt.Color(204, 255, 255));
+        editardetallescompra.setFont(new java.awt.Font("Segoe UI", 2, 24)); // NOI18N
+        editardetallescompra.setText("Editar detalles de compra");
+        editardetallescompra.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                editardetallescompraActionPerformed(evt);
+            }
+        });
+
+        eliminardetallescompra.setBackground(new java.awt.Color(204, 255, 255));
+        eliminardetallescompra.setFont(new java.awt.Font("Segoe UI", 2, 24)); // NOI18N
+        eliminardetallescompra.setText("Eliminar detalles de compra");
+        eliminardetallescompra.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                eliminardetallescompraActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -94,13 +137,21 @@ public class menucompras extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(37, 37, 37)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(buscarcompra, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(eliminarcompra, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(regresar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(editarcompra, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(registrarcompra, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(33, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(buscarcompra, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(eliminarcompra, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(editarcompra, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(registrarcompra, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(eliminardetallescompra, javax.swing.GroupLayout.PREFERRED_SIZE, 356, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(editardetallescompra, javax.swing.GroupLayout.PREFERRED_SIZE, 356, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(buscardetallescompra, javax.swing.GroupLayout.PREFERRED_SIZE, 354, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(agregardetallescompra, javax.swing.GroupLayout.PREFERRED_SIZE, 354, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(35, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -108,13 +159,21 @@ public class menucompras extends javax.swing.JFrame {
                 .addGap(32, 32, 32)
                 .addComponent(jLabel2)
                 .addGap(42, 42, 42)
-                .addComponent(registrarcompra)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(registrarcompra)
+                    .addComponent(agregardetallescompra))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(editarcompra)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(editarcompra)
+                    .addComponent(buscardetallescompra))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(buscarcompra)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(buscarcompra)
+                    .addComponent(editardetallescompra))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(eliminarcompra)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(eliminarcompra)
+                    .addComponent(eliminardetallescompra))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(regresar)
                 .addContainerGap(30, Short.MAX_VALUE))
@@ -123,6 +182,9 @@ public class menucompras extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    CompraDAO compraDAO = new CompraDAO();
+    DetallesCompraDAO detallesCompraDAO = new DetallesCompraDAO();
+
     private void regresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_regresarActionPerformed
         this.dispose();
         menuprincipal menu = new menuprincipal();
@@ -130,20 +192,36 @@ public class menucompras extends javax.swing.JFrame {
     }//GEN-LAST:event_regresarActionPerformed
 
     private void eliminarcompraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eliminarcompraActionPerformed
-        // AQUI VA EL CODIGO Y LO LOGICO DE LA PARTE DE COMPRAS
+        compraDAO.eliminarCompra();
     }//GEN-LAST:event_eliminarcompraActionPerformed
 
     private void buscarcompraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buscarcompraActionPerformed
-        // AQUI VA EL CODIGO Y LO LOGICO DE LA PARTE DEL VENTAS
+        compraDAO.obtenerCompra();
     }//GEN-LAST:event_buscarcompraActionPerformed
 
     private void editarcompraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editarcompraActionPerformed
-        // AQUI VA EL CODIGO Y LO LOGICO DE LA PARTE DE CLIENTES
+        compraDAO.actualizarCompra();
     }//GEN-LAST:event_editarcompraActionPerformed
 
     private void registrarcompraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registrarcompraActionPerformed
-        // AQUI VA EL CODIGO Y LO LOGICO DE LA PARTE DEL INVENTARIO
+        compraDAO.agregarCompra();
     }//GEN-LAST:event_registrarcompraActionPerformed
+
+    private void agregardetallescompraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_agregardetallescompraActionPerformed
+        detallesCompraDAO.agregarDetallesCompra();
+    }//GEN-LAST:event_agregardetallescompraActionPerformed
+
+    private void buscardetallescompraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buscardetallescompraActionPerformed
+        detallesCompraDAO.obtenerDetallesCompra();
+    }//GEN-LAST:event_buscardetallescompraActionPerformed
+
+    private void editardetallescompraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editardetallescompraActionPerformed
+        detallesCompraDAO.actualizarDetallesCompra();
+    }//GEN-LAST:event_editardetallescompraActionPerformed
+
+    private void eliminardetallescompraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eliminardetallescompraActionPerformed
+        detallesCompraDAO.eliminarDetallesCompra();
+    }//GEN-LAST:event_eliminardetallescompraActionPerformed
 
     /**
      * @param args the command line arguments
@@ -181,9 +259,13 @@ public class menucompras extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton agregardetallescompra;
     private javax.swing.JButton buscarcompra;
+    private javax.swing.JButton buscardetallescompra;
     private javax.swing.JButton editarcompra;
+    private javax.swing.JButton editardetallescompra;
     private javax.swing.JButton eliminarcompra;
+    private javax.swing.JButton eliminardetallescompra;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JButton registrarcompra;
     private javax.swing.JButton regresar;
