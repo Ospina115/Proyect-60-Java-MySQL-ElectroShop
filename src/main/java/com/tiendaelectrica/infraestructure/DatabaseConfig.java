@@ -19,3 +19,5 @@ public class DatabaseConfig {
         }
     }
 }
+
+// import com.tiendaelectrica.infraestructure.DatabaseConfig; //

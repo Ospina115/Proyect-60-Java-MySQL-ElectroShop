@@ -3,32 +3,42 @@ package com.tiendaelectrica.cruds.inventario.domain.entity;
 import java.sql.Date;
 
 public class Inventario {
-    
-    private int id;
-    private int cantidad;
+    private int id_inventario;
+    private int id_producto;
+    private int cantidad_inventario;
     private Date fecha_ingreso;
     private Date fecha_actualizacion;
-    
-    public Inventario(int cantidad, Date fecha_ingreso, Date fecha_actualizacion) {
-        this.cantidad = cantidad;
+
+    public Inventario(int id_producto, int cantidad_inventario, Date fecha_ingreso, Date fecha_actualizacion) {
+        this.id_producto = id_producto;
+        this.cantidad_inventario = cantidad_inventario;
         this.fecha_ingreso = fecha_ingreso;
         this.fecha_actualizacion = fecha_actualizacion;
     }
 
-    public int getId() {
-        return id;
+    // Getters y setters
+    public int getId_inventario() {
+        return id_inventario;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setId_inventario(int id_inventario) {
+        this.id_inventario = id_inventario;
     }
 
-    public int getCantidad() {
-        return cantidad;
+    public int getId_producto() {
+        return id_producto;
     }
 
-    public void setCantidad(int cantidad) {
-        this.cantidad = cantidad;
+    public void setId_producto(int id_producto) {
+        this.id_producto = id_producto;
+    }
+
+    public int getCantidad_inventario() {
+        return cantidad_inventario;
+    }
+
+    public void setCantidad_inventario(int cantidad_inventario) {
+        this.cantidad_inventario = cantidad_inventario;
     }
 
     public Date getFecha_ingreso() {
@@ -46,6 +56,4 @@ public class Inventario {
     public void setFecha_actualizacion(Date fecha_actualizacion) {
         this.fecha_actualizacion = fecha_actualizacion;
     }
-
-    
 }
