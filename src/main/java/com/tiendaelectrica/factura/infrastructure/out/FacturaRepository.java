@@ -14,11 +14,11 @@ public class FacturaRepository implements FacturaService {
     @Override
     public Factura FindFacturaById(int id_detalle_venta) {
         String sql = "SELECT dv.id_detalle_venta, v.fecha_venta, c.nombre_cliente, c.apellido_cliente ,p.nombre_producto, p.descripcion_producto, dv.cantidad_productos, dv.subprecio, dv.descuento, dv.total " +
-                     "FROM clientes AS c " +
-                     "JOIN ventas AS v ON c.id_cliente = v.id_cliente " +
-                     "JOIN detalles_ventas AS dv ON v.id_venta = dv.id_venta " +
-                     "JOIN productos AS p ON dv.id_producto = p.id_producto " +
-                     "WHERE dv.id_detalle_venta = ?";
+                    "FROM clientes AS c " +
+                    "JOIN ventas AS v ON c.id_cliente = v.id_cliente " +
+                    "JOIN detalles_ventas AS dv ON v.id_venta = dv.id_venta " +
+                    "JOIN productos AS p ON dv.id_producto = p.id_producto " +
+                    "WHERE dv.id_detalle_venta = ?";
         try (Connection connection = DatabaseConfig.getConnection();
              PreparedStatement statement = connection.prepareStatement(sql)) {
             statement.setInt(1, id_detalle_venta);

@@ -24,18 +24,16 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="1" attributes="0">
-              <EmptySpace pref="165" max="32767" attributes="0"/>
+              <EmptySpace pref="139" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="1" max="-2" attributes="0">
                   <Component id="modificacion" max="32767" attributes="0"/>
-                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="Titulo" max="32767" attributes="0"/>
-                      <Component id="historialventas" max="32767" attributes="0"/>
-                      <Component id="facturas" max="32767" attributes="0"/>
-                      <Component id="pedidospendientes" max="32767" attributes="0"/>
-                      <Component id="reportes" max="32767" attributes="0"/>
-                  </Group>
+                  <Component id="Titulo" alignment="0" max="32767" attributes="0"/>
+                  <Component id="historialventas" alignment="0" max="32767" attributes="0"/>
+                  <Component id="facturas" alignment="0" max="32767" attributes="0"/>
+                  <Component id="pedidospendientes" alignment="0" max="32767" attributes="0"/>
+                  <Component id="reportes" alignment="0" max="32767" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="154" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="127" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -63,7 +61,7 @@
     <Component class="javax.swing.JLabel" name="Titulo">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Bitstream Charter" size="48" style="3"/>
+          <Font name="Bell MT" size="48" style="3"/>
         </Property>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="99" green="99" red="0" type="rgb"/>
@@ -81,6 +79,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Generar Facturas"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="facturasActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="historialventas">
       <Properties>
@@ -92,6 +93,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Historial de Ventas"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="historialventasActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="pedidospendientes">
       <Properties>
@@ -103,6 +107,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Pedidos Pendientes"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="pedidospendientesActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="reportes">
       <Properties>
@@ -114,6 +121,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Reportes"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="reportesActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="modificacion">
       <Properties>
@@ -125,6 +135,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Modificacion de Datos"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="modificacionActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>
